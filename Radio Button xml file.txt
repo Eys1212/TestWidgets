@@ -1,0 +1,27 @@
+   <RadioGroup
+        android:id="@+id/radio_gp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_a_voir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/à_voir" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_en_cour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/en_cour" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_termine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/terminé" />
+    </RadioGroup>

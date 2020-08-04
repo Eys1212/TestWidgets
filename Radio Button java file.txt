@@ -1,0 +1,43 @@
+
+import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+public class WidgetsActivity extends AppCompatActivity {
+
+    private RadioGroup mRadioGp;
+    private RadioButton mAVoir, mEnCour, mTermine;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_widgets);
+        mAVoir=(RadioButton) findViewById(R.id.radio_btn_a_voir);
+        mEnCour=(RadioButton) findViewById(R.id.radio_btn_en_cour);
+        mTermine=(RadioButton) findViewById(R.id.radio_btn_termine);
+        onClickListenerButton();
+
+       /* RadioGroup mRadioGp = new RadioGroup(this);
+        RadioButton mAVoir = new RadioButton(this);
+        RadioButton mEnCour = new RadioButton(this);
+        RadioButton mTermine = new RadioButton(this); */
+
+
+    }
+    public void onClickListenerButton(){
+        mRadioGp=(RadioGroup)findViewById(R.id.radio_gp);
+        mAVoir=(RadioButton) findViewById(R.id.radio_btn_a_voir);
+        mEnCour=(RadioButton) findViewById(R.id.radio_btn_en_cour);
+        mTermine=(RadioButton) findViewById(R.id.radio_btn_termine);
+
+        // On ajoute les boutons au RadioGroup
+        RadioGroup.addView(mAVoir, 0);
+        RadioGroup.addView(mEnCour, 1);
+        RadioGroup.addView(mTermine, 2);
+
+        // On récupère l'identifiant du bouton qui est coché OK
+        int selected_id = mRadioGp.getCheckedRadioButtonId();
+    }
+}
